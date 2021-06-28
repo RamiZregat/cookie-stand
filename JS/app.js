@@ -51,7 +51,7 @@ let SeattleShop={
 
     let SeattleList=document.createElement('ul');
     Seattle.appendChild(SeattleList);
-    for(i=0;i<14;i++){
+    for(i=0;i<15;i++){
         let SeattleListItem=document.createElement('li');
         SeattleList.appendChild(SeattleListItem);
         SeattleListItem.textContent=SeattleShop.HourlyAvgCookies[i];
@@ -108,7 +108,7 @@ let TokyoShop={
 
     let TokyoList=document.createElement('ul');
     Tokyo.appendChild(TokyoList);
-    for(i=0;i<14;i++){
+    for(i=0;i<15;i++){
         let TokyoListItem=document.createElement('li');
         TokyoList.appendChild(TokyoListItem);
         TokyoListItem.textContent=TokyoShop.HourlyAvgCookies[i];
@@ -161,7 +161,7 @@ let DubaiShop={
 
     let DubaiList=document.createElement('ul');
     Dubai.appendChild(DubaiList);
-    for(i=0;i<14;i++){
+    for(i=0;i<15;i++){
         let DubaiListItem=document.createElement('li');
         DubaiList.appendChild(DubaiListItem);
         DubaiListItem.textContent=DubaiShop.HourlyAvgCookies[i];
@@ -214,7 +214,7 @@ let ParisShop={
 
     let ParisList=document.createElement('ul');
     Paris.appendChild(ParisList);
-    for(i=0;i<14;i++){
+    for(i=0;i<15;i++){
         let ParisListItem=document.createElement('li');
         ParisList.appendChild(ParisListItem);
         ParisListItem.textContent=ParisShop.HourlyAvgCookies[i];
@@ -267,7 +267,7 @@ let LimaShop={
 
     let LimaList=document.createElement('ul');
     Lima.appendChild(LimaList);
-    for(i=0;i<14;i++){
+    for(i=0;i<15;i++){
         let LimaListItem=document.createElement('li');
         LimaList.appendChild(LimaListItem);
         LimaListItem.textContent=LimaShop.HourlyAvgCookies[i];
