@@ -1,0 +1,89 @@
+div table{
+    border:solid 1px black;
+    margin-top: 120px;
+    margin-left: 10%;
+    font-family: 'Indie Flower', cursive;
+}
+div table td, div table th{
+    border:solid 1px black;
+    padding:20px;
+}
+nav {
+    background-color:rgba(100, 148, 237, 0.397);
+    height: 60px;
+}
+header nav a h2 {
+    font-family: 'Indie Flower', cursive;
+    margin-right: 200px;
+    float: right;
+}
+#header{
+    margin-left: 200px;
+}
+header nav h1,header nav h2{
+    font-family: 'Indie Flower', cursive;
+    display:inline-block;
+    color:cornflowerblue;
+    font-size:25px;
+    position: relative;
+    top:20px;
+    
+}
+header{
+    height: 20px;
+    
+}
+#Family{
+    position: relative;
+    left:500px;
+    top:80px;
+}
+#fish1{
+    width:300px;
+    position: relative;
+    left:600px;
+    bottom:300px;
+}
+#fish2{
+    width:300px;
+    position: relative;
+    left:80px;
+    bottom: 610px;
+}
+#fish3{
+    width:300px;
+    position: relative;
+    right:215px;
+    bottom:100px;
+    
+}
+#fish4{
+    width:300px;
+    position: relative;
+    left:850px;
+    bottom: 134px;
+}
+#shirtfish{
+    width:200px;
+    position: relative;
+    left:570px;
+    bottom: 700px;
+}
+#fish5{
+    width:300px;
+    position: relative;
+    left:800px;
+    bottom: 700px;
+}
+footer{
+    background-color:rgba(100, 148, 237, 0.397);
+    height: 60px;
+}
+footer h2{
+    font-family: 'Indie Flower', cursive;
+    margin-left:40px;
+    padding-top:24px;
+    color:cornflowerblue;
+    font-size:20px;
+    text-align: center;
+}

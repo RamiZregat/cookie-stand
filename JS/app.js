@@ -54,19 +54,19 @@ function Stores(Name, Max, Min, Avg) {
 }
 
 let Seattle = new Stores('Seattle', 65, 23, 6.3);
-Seattle.result();
+Seattle.HourlyAvgCookiesFunction();
 
 let Tokyo = new Stores('Tokyo', 24, 3, 1.2);
-Tokyo.result();
+Tokyo.HourlyAvgCookiesFunction();
 
 let Dubai = new Stores('Dubai', 38, 11, 3.7);
-Dubai.result();
+Dubai.HourlyAvgCookiesFunction();
 
 let Paris = new Stores('Paris', 38, 20, 2.3);
-Paris.result();
+Paris.HourlyAvgCookiesFunction();
 
 let Lima = new Stores('Lima', 16, 2, 4.6);
-Lima.result();
+Lima.HourlyAvgCookiesFunction();
     
 
 
