@@ -1,7 +1,6 @@
 `use strict`
 
-let tot=[];
-
+let StoresArray=[]
 function Stores(Name, Max, Min, Avg) {
     this.Name = Name;
     this.Max = Max;
@@ -51,6 +50,7 @@ function Stores(Name, Max, Min, Avg) {
             storeListItem.textContent = this.HourlyAvgCookies[i];
         }
     };
+    StoresArray.push(this)
 }
 
 let Seattle = new Stores('Seattle', 65, 23, 6.3);
@@ -72,6 +72,7 @@ Lima.HourlyAvgCookiesFunction();
 
 let parent = document.getElementById('table');
 let table = document.createElement('table');
+table.setAttribute('id','tab')
 parent.appendChild(table);
 let HeaderRow = document.createElement('tr');
 table.appendChild(HeaderRow);
@@ -98,28 +99,52 @@ Stores.prototype.TableData = function () {
     let SeattleColumn0 = document.createElement('td');
     Row.appendChild(SeattleColumn0);
     SeattleColumn0.textContent = this.Name;
-    let tota = 0;
+    let tot = 0;
     for (let i = 0; i < this.StoreAvgCookies.length - 1; i++) {
         let Column = document.createElement('td');
         Row.appendChild(Column);
         Column.textContent = this.StoreAvgCookies[i];
-        tota = tota + this.StoreAvgCookies[i];
+        tot = tot + this.StoreAvgCookies[i];
     }
-    tot.push(tota);
     this.HourlyAvgCookiesFunction();
     let SeattleColumn = document.createElement('td');
     Row.appendChild(SeattleColumn);
-    SeattleColumn.textContent = tota;
+    SeattleColumn.textContent = tot;
 }
-Seattle.TableData();
-Tokyo.TableData();
-Dubai.TableData();
-Paris.TableData();
-Lima.TableData();
+for(let i=0;i<StoresArray.length;i++){
+    StoresArray[i].TableData();
+}
+
+const CookiesForm=document.getElementById('CookiesForm')
+CookiesForm.addEventListener('submit',CookiesFormFunction);
+
+
+function CookiesFormFunction(event){
+event.preventDefault()
+console.log(event);
+const NewLocationName=event.target.namefield.value;
+const NewMax=Number(event.target.maxfield.value);
+console.log(typeof NewMax);
+const NewMin=Number(event.target.minfield.value);
+console.log(typeof NewMin);
+const NewAvg=Number(event.target.avgfield.value);
+console.log(typeof NewAvg);
+const NewShop=new Stores(NewLocationName,NewMax,NewMin,NewAvg);
+console.log(NewShop);
+NewShop.HourlyAvgCookiesFunction();
+NewShop.TableData();
+
+let tables = document.getElementById('tab');
+let rowCount = tables.rows.length;
+tables.deleteRow(rowCount - 2);
+
+Tablefooter();
+
+}
+
 
 
 function Tablefooter() {
-    let TotArray=[];
     let FooterRow=document.createElement('tr');
     let Totala=0
     table.appendChild(FooterRow);
@@ -127,19 +152,21 @@ function Tablefooter() {
     FooterRow.appendChild(FooterColumn);
     FooterColumn.textContent='Totals'
     for(let i=0;i<14;i++){
-    TotArray[i]=Seattle.StoreAvgCookies[i]+Tokyo.StoreAvgCookies[i]+Dubai.StoreAvgCookies[i]+Paris.StoreAvgCookies[i]+Lima.StoreAvgCookies[i]
+        let TotalaEachHour=0
+        for(let j=0;j<StoresArray.length;j++){
+            TotalaEachHour+=StoresArray[j].StoreAvgCookies[i]
+        }
+        Totala+=TotalaEachHour
     let FooterColumn=document.createElement('td');
     FooterRow.appendChild(FooterColumn);
-    FooterColumn.textContent=TotArray[i];
+    FooterColumn.textContent=TotalaEachHour;
 }
-    for(let j=0;j<5;j++){
-        Totala=Totala+tot[j]
-    }
     let FooterColumn0=document.createElement('td');
     FooterRow.appendChild(FooterColumn0);
     FooterColumn0.textContent=Totala;
 }
-
 Tablefooter();
+
+
 
 
