@@ -23,6 +23,13 @@ header nav a h2 {
 #header{
     margin-left: 200px;
 }
+#gif{
+    position: absolute;
+    right: 320px;
+    top: 220px;
+    width: 500px;
+    border-radius: 20px;
+}
 header nav h1,header nav h2{
     font-family: 'Indie Flower', cursive;
     display:inline-block;
