@@ -6,20 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SalmonCookies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet" <link
+        rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
-
         header h1 {
             text-align: center;
         }
 
         #Family {
             float: right;
-            margin-right: 550px;
+            margin-right: 540px;
         }
 
         #fish1 {
             float: right;
-            margin-right: 550px;
+            margin-right: 540px;
             width: 300px;
         }
 
@@ -38,21 +43,71 @@
         #fish4 {
             width: 200px;
             float: left;
-            margin-left: 600px;
+            margin-left: 610px;
 
         }
 
         #shirtfish {
             width: 200px;
             float: right;
-            margin-right: 680px;
+            margin-right: 670px;
         }
 
         #fish5 {
             width: 200px;
             position: relative;
-            left: 1354px;
-            top: 467px;
+            left: 1347px;
+            top: 477px;
+        }
+
+        header {
+            padding-top: 15px;
+            background-color: rgba(100, 148, 237, 0.397);
+            height: 60px;
+
+        }
+
+        header h1 {
+            font-family: 'Indie Flower', cursive;
+            height: 40px;
+            color: cornflowerblue;
+            margin: 0;
+            padding-bottom: 30px;
+
+        }
+
+        h2 {
+            text-decoration: none;
+            background-color: rgba(100, 148, 237, 0.397);
+            margin-right: 1640px;
+            border-radius: 15px;
+            border: solid cornflowerblue;
+            text-align: center;
+
+        }
+
+        h2 a {
+            text-decoration: none;
+            color: cornflowerblue;
+        }
+
+        footer {
+            background-color: rgba(100, 148, 237, 0.397);
+            height: 40px;
+            margin-top:290px;
+            width: 100%;
+            font-family: 'Indie Flower', cursive;
+            padding-top: 20px;
+            color: cornflowerblue;
+            font-size: 20px;
+            text-align: center;
+        }
+        #upperimage{
+            position:absolute;
+            left:40px ;
+        }
+        #list,ul li{
+            margin-right: 40px;
         }
     </style>
 </head>
@@ -67,7 +122,7 @@
     <img src="images/2.jpeg" alt="Fish" id='fish3'>
     <img src="images/5.jpg" alt="Fish" id='fish5'>
 
-    <h1>This list of our shops:</h1>
+    <h1 id=list>This list of our shops:</h1>
     <ul>
         <li>
             <h1>Seattle Shop</h1>
@@ -84,13 +139,15 @@
         <li>
             <h1>Lima Shop</h1>
         </li>
-        <h2><a href="sales.html">Sales For each shop</a></h2>
-        
+
         <img src="images/4.jpg" alt="Fish" id='fish4'>
         <img src="images/7.jpg" alt="Fish Shirt" id='shirtfish'>
 
     </ul>
+    <h2><a href="sales.html">Sales For each shop here</a></h2>
+    <img src="images/22.jpg" alt="" id=upperimage>
 
+    <footer> &copy; Salmon Cookies</footer>
 </body>
 
 </html>
